@@ -34,8 +34,9 @@ class Pole:
             self.x0 -= self.speed * frame_time_s
             self.x1 -= self.speed * frame_time_s
 
-    def start_moving(self):
+    def start_moving(self, speed):
         self.can_move = True
+        self.speed = speed
 
     def draw(self, surface):
         pygame.draw.line(surface, POLE_COLOR,
